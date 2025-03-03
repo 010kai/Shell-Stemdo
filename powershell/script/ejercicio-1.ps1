@@ -1,5 +1,8 @@
-$OU = "OU=Domain Controllers,DC=server,DC=local"
-$Domain = "server.local"  # Reemplaza con tu dominio real
+
+New-ADOrganizationalUnit -Name "jugador" -Path "DC=server,DC=local"
+
+$OU = "OU=jugador,DC=server,DC=local"
+$Domain = "server.local" 
  
 Import-Csv -Path "C:\Users\Administrador\Desktop\jugadores.csv" | ForEach-Object {
     $FullName = "$($_.FirstName) $($_.LastName)"
