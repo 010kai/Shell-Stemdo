@@ -1,21 +1,15 @@
 #!/bin/bash
 
-echo "El nombre del script es: $0"
+echo "El nombre del script es: $0"  # Muestra el nombre del script
 
+echo "Los números que se han pasado: $# "  # Muestra la cantidad de argumentos pasados al script
 
-echo "Los numeros que se han pasado: $# "
+echo "Esto es una lista con los parámetros introducidos: $@ "  # Muestra todos los parámetros pasados al script
 
+echo "Este es tu identificador de usuario: $(id -u)"  # Muestra el UID del usuario
 
-echo "Esto es una lista con los parametros introducidos: $@ "
+echo "Tu nombre de usuario: $(whoami)"  # Muestra el nombre de usuario
 
+echo "El home de tu usuario: $HOME "  # Muestra el directorio home del usuario
 
-echo "Estes tu identificador de usuarios: $(id -u)"
-
-
-echo "Tu nombre de usuario: $(whoami)"
-
-
-echo "El home de tu usuario: $HOME "
-
-
-echo "Directorio actual: $(pwd)"
+echo "Directorio actual: $(pwd)"  # Muestra el directorio actual
