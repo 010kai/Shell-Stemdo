@@ -1,17 +1,13 @@
 #!/bin/bash
 
-if [ -f $1 ]
-then
-echo "El archivo $1 existe"
+if [ -f $1 ]; then  # Verifica si el archivo existe
+  echo "El archivo $1 existe"
 
-if [ -x $1 ]
-then
-
-echo "El archivo $1 tiene permisos de ejecucion"
-
+  if [ -x $1 ]; then  # Verifica si el archivo tiene permisos de ejecución
+    echo "El archivo $1 tiene permisos de ejecución"
+  else
+    echo "El archivo $1 no tiene permisos de ejecución"
+  fi
 else
-echo "El archivo $1 no tiene permisos de ejecucion"
-fi
-else
-echo "El archivo $1 no existe"
+  echo "El archivo $1 no existe"
 fi
